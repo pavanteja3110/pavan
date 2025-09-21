@@ -1,0 +1,61 @@
+{
+  "name": "Resume",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string",
+      "description": "Student's full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Student's email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Student's phone number"
+    },
+    "education": {
+      "type": "string",
+      "description": "Education details"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of skills mentioned in resume"
+    },
+    "experience": {
+      "type": "string",
+      "description": "Work experience details"
+    },
+    "projects": {
+      "type": "string",
+      "description": "Projects section content"
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of certifications"
+    },
+    "raw_text": {
+      "type": "string",
+      "description": "Full extracted resume text"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "Original resume file URL"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Original file name"
+    }
+  },
+  "required": [
+    "student_name",
+    "raw_text",
+    "file_name"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "JobDescription",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Job title"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "location": {
+      "type": "string",
+      "description": "Job location"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full job description text"
+    },
+    "required_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of required skills"
+    },
+    "preferred_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of preferred skills"
+    },
+    "experience_level": {
+      "type": "string",
+      "enum": [
+        "entry",
+        "junior",
+        "mid",
+        "senior"
+      ],
+      "description": "Required experience level"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "Original job description file URL"
+    }
+  },
+  "required": [
+    "title",
+    "description"
+  ]
+}

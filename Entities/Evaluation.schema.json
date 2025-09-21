@@ -1,0 +1,79 @@
+{
+  "name": "Evaluation",
+  "type": "object",
+  "properties": {
+    "resume_id": {
+      "type": "string",
+      "description": "Reference to resume"
+    },
+    "job_description_id": {
+      "type": "string",
+      "description": "Reference to job description"
+    },
+    "relevance_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Overall relevance score (0-100)"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "description": "Suitability verdict"
+    },
+    "matching_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Skills that match between resume and JD"
+    },
+    "missing_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Required skills missing from resume"
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Resume strengths for this position"
+    },
+    "improvement_suggestions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Suggestions for improving resume relevance"
+    },
+    "detailed_feedback": {
+      "type": "string",
+      "description": "Detailed evaluation feedback"
+    },
+    "hard_match_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Keyword matching score"
+    },
+    "semantic_match_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Semantic similarity score"
+    }
+  },
+  "required": [
+    "resume_id",
+    "job_description_id",
+    "relevance_score",
+    "verdict"
+  ]
+}
